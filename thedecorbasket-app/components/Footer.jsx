@@ -8,32 +8,38 @@ export default function Footer({ settings }) {
   return (
     <footer
       id="contact"
-      className="bg-ink text-[#E3B15C] pt-12 pb-6 mt-16"
+      className="bg-ink pt-12 pb-6 mt-16"
     >
       <div className="max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-8 pb-8">
 
         {/* Brand */}
         <div>
-          <h4 className="text-[#E3B15C] font-display font-bold text-lg mb-2">
+          <h4
+            className="font-display font-bold text-lg mb-2"
+            style={{ color: "#E3B15C" }}
+          >
             {settings?.site_title || "The Decor Basket"}
           </h4>
 
-          <p className="text-[#E3B15C] text-sm font-semibold max-w-xs">
+          <p className="text-white text-sm font-normal max-w-xs">
             {settings?.tagline || "Curated with Care, Styled with Love"}
           </p>
         </div>
 
         {/* Explore */}
         <div>
-          <h4 className="text-[#E3B15C] font-display font-bold text-lg mb-2">
+          <h4
+            className="font-display font-bold text-lg mb-2"
+            style={{ color: "#E3B15C" }}
+          >
             Explore
           </h4>
 
-          <ul className="space-y-1 text-sm font-semibold">
+          <ul className="space-y-1 text-sm font-normal">
             <li>
               <Link
                 href="/shop"
-                className="text-[#E3B15C] hover:text-white transition-colors"
+                className="text-white font-normal hover:text-[#E3B15C] transition-colors"
               >
                 Shop All
               </Link>
@@ -42,7 +48,7 @@ export default function Footer({ settings }) {
             <li>
               <Link
                 href="/#about"
-                className="text-[#E3B15C] hover:text-white transition-colors"
+                className="text-white font-normal hover:text-[#E3B15C] transition-colors"
               >
                 About Us
               </Link>
@@ -51,7 +57,7 @@ export default function Footer({ settings }) {
             <li>
               <Link
                 href="/#contact"
-                className="text-[#E3B15C] hover:text-white transition-colors"
+                className="text-white font-normal hover:text-[#E3B15C] transition-colors"
               >
                 Contact
               </Link>
@@ -61,18 +67,21 @@ export default function Footer({ settings }) {
 
         {/* Reach Us */}
         <div>
-          <h4 className="text-[#E3B15C] font-display font-bold text-lg mb-2">
+          <h4
+            className="font-display font-bold text-lg mb-2"
+            style={{ color: "#E3B15C" }}
+          >
             Reach Us
           </h4>
 
-          <ul className="space-y-2 text-sm font-semibold">
+          <ul className="space-y-2 text-sm font-normal">
 
             {/* Email */}
             {email && (
               <li>
                 <a
                   href={`mailto:${email}`}
-                  className="text-[#E3B15C] hover:text-white transition-colors flex items-center gap-2"
+                  className="flex items-center gap-2 text-white font-normal hover:text-[#E3B15C] transition-colors"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +111,7 @@ export default function Footer({ settings }) {
                   href={`https://wa.me/${whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#E3B15C] hover:text-white transition-colors flex items-center gap-2"
+                  className="flex items-center gap-2 text-white font-normal hover:text-[#E3B15C] transition-colors"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +136,7 @@ export default function Footer({ settings }) {
                   href={instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#E3B15C] hover:text-white transition-colors flex items-center gap-2"
+                  className="flex items-center gap-2 text-white font-normal hover:text-[#E3B15C] transition-colors"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +152,13 @@ export default function Footer({ settings }) {
                   >
                     <rect x="3" y="3" width="18" height="18" rx="5" />
                     <circle cx="12" cy="12" r="4" />
-                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    <circle
+                      cx="17.5"
+                      cy="6.5"
+                      r="1"
+                      fill="currentColor"
+                      stroke="none"
+                    />
                   </svg>
 
                   <span>Instagram</span>
@@ -153,12 +168,14 @@ export default function Footer({ settings }) {
 
           </ul>
         </div>
-
       </div>
 
       {/* Copyright */}
       <div className="max-w-6xl mx-auto px-5 border-t border-ivory/15 pt-4 flex flex-wrap justify-between gap-2 text-xs">
-        <span className="text-[#E3B15C] font-semibold">
+        <span
+          className="font-bold"
+          style={{ color: "#E3B15C" }}
+        >
           © {new Date().getFullYear()}{" "}
           {settings?.site_title || "The Decor Basket"}. All rights reserved.
         </span>
